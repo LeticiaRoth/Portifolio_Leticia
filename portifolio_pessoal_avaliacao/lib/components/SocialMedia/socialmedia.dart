@@ -42,7 +42,7 @@ class SocialMedia extends StatelessWidget {
   Widget _socialImage(String path, String url) {
     return InkWell(
       onTap: () => _launchURL(url),
-      borderRadius: BorderRadius.circular(5),
+      borderRadius: BorderRadius.circular(78),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
@@ -50,10 +50,11 @@ class SocialMedia extends StatelessWidget {
           width: 80,
           height: 80,
           fit: BoxFit.contain,
+          //Para ver se tiver erro na imagem
           errorBuilder: (context, error, stackTrace) => const Icon(
             Icons.broken_image,
             size: 60,
-            color: Color.fromARGB(255, 201, 201, 201),
+            color: Color.fromARGB(255, 211, 167, 167),
           ),
         ),
       ),

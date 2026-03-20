@@ -24,14 +24,14 @@ class _CarrosselRowState extends State<Carrossel> {
   @override
   Widget build(BuildContext context) {
     final List<String> images = [
-      'assets/react.png',
+      'assets/figma.png',
+      'assets/django.png',
+      'assets/fastapi.png',
       'assets/html.png',
-      'assets/css.png',
-      'assets/js.png',
-      'assets/python.png',
       'assets/java.png',
-      'assets/node_js.png',
-      'assets/c++.png',
+      'assets/mysql.png',
+      'assets/react.png',
+      'assets/selenium.png',
       'assets/figma.png',
       'assets/git.png',
       'assets/mysql.png',

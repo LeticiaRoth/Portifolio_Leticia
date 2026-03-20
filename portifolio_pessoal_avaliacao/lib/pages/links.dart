@@ -13,18 +13,19 @@ class Links extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 50),
+            SizedBox(height: 50),
 
             const Center(child: SocialMedia()),
 
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 100, bottom: 20),
               child: Text(
-                "Tecnologias",
+                "TECNOLOGIAS",
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 160, 4, 113),
+                  color: Color.fromARGB(255, 61, 1, 11),
+                  letterSpacing: 4
                 ),
               ),
             ),
