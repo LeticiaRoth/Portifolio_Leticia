@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio_pessoal_avaliacao/components/Buttons/botaoInicial.dart';
+import 'package:portifolio_pessoal_avaliacao/components/Containers/containerImagem.dart';
 import 'package:portifolio_pessoal_avaliacao/components/Titles/bemVindo.dart';
+import 'package:portifolio_pessoal_avaliacao/pages/boasVindas.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -15,47 +18,36 @@ class Homepage extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF1E0000), 
-              Color(0xFF4A0000), 
-              Color(0xFF7A0000), 
-              Color(0xFFA11212), 
+              Color(0xFF1E0000),
+              Color(0xFF4A0000),
+              Color(0xFF7A0000),
+              Color(0xFFA11212),
             ],
             stops: [0.0, 0.3, 0.7, 1.0],
           ),
         ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Bemvindo(
-                tituloH1: "BEM VINDO(A)!",
-                tituloH2: "Veja um pouco mais sobre mim!",
-              ),
-              SizedBox(height: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Bemvindo(
+              tituloH1: "BEM VINDO(A)!",
+              tituloH2: "Veja um pouco mais sobre mim!",
+            ),
+            SizedBox(height: 30),
 
-              Container(
-                padding: const EdgeInsets.all(3),
-                height: 419,
-                width: 319,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(2),
-                ),
-                child: Center(
-                  child: Text("ola"),
-                ),
-              ),
-                            SizedBox(height: 30),
+            //Foto 
+            ContainerImagem(imagem: 'assets/fotoPortifolio.png', textoPrincipal: "LETÍCIA ROTH", textoSecundario: "Aprendiz Soluções Digitais"),
 
-              Container(
-                width: 220,
-                height: 29,
-                decoration: BoxDecoration(
-                  color: Colors.amber
-                ),
-              )
-            ],
-          ),
+            SizedBox(height: 30),
 
+            Button(
+              corBotao: Color(0xFFDE9393),
+              corTexto: Color(0xFF2C0303),
+              texto: "Entrar",
+              pagina: Boasvindas(),
+            ),
+          ],
+        ),
       ),
     );
   }
