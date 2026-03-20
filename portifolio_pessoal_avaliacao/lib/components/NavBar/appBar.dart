@@ -11,7 +11,12 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Color(0xFF4B0404),
       title: Text(
         textoNavBar,
-        style: TextStyle(color: Colors.white, fontSize: 23, letterSpacing: 2, fontWeight: FontWeight.w400),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 23,
+          letterSpacing: 2,
+          fontWeight: FontWeight.w400,
+        ),
       ),
       centerTitle: true,
       elevation: 0,

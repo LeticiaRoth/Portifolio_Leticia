@@ -35,8 +35,12 @@ class Homepage extends StatelessWidget {
             ),
             SizedBox(height: 30),
 
-            //Foto 
-            ContainerImagem(imagem: 'assets/fotoPortifolio.png', textoPrincipal: "LETÍCIA ROTH", textoSecundario: "Aprendiz Soluções Digitais"),
+            //Foto
+            ContainerImagem(
+              imagem: 'assets/fotoPortifolio.png',
+              textoPrincipal: "LETÍCIA ROTH",
+              textoSecundario: "Aprendiz Soluções Digitais",
+            ),
 
             SizedBox(height: 30),
 

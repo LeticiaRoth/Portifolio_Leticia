@@ -13,10 +13,10 @@ class Boasvindas extends StatelessWidget {
     return Scaffold(
       appBar: Appbar(textoNavBar: "Apresentação"),
       body: Center(
-        child: SingleChildScrollView( 
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 8), 
+              const SizedBox(height: 8),
               ContainerApresentacao(
                 imagem: 'assets/fotoPortifolio.png',
                 nome: "Letícia Alves Roth",
@@ -24,7 +24,7 @@ class Boasvindas extends StatelessWidget {
                 cidade: "Hortolandia - SP",
                 funcao: "Aprendiz Soluções Digitais",
               ),
-              const SizedBox(height: 60), 
+              const SizedBox(height: 60),
               Container(
                 width: 380,
                 height: 300,
@@ -41,7 +41,7 @@ class Boasvindas extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 20), 
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -59,7 +59,7 @@ class Boasvindas extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20), 
+              const SizedBox(height: 20),
             ],
           ),
         ),

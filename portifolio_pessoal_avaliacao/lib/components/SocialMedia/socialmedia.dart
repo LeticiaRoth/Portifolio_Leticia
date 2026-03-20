@@ -8,7 +8,7 @@ class SocialMedia extends StatelessWidget {
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw Exception('Não foi possível abrir $url');
+      throw Exception('Não foi possível abrir $url, tente novamente!');
     }
   }
 

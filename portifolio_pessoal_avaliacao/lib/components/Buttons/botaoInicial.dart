@@ -14,7 +14,6 @@ class Button extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         //Fixa um tamanho
         fixedSize: const Size(220, 50),
-
         backgroundColor: corBotao,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4),
