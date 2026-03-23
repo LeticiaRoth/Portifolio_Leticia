@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio_pessoal_avaliacao/components/Buttons/botaoInicial.dart';
 import 'package:portifolio_pessoal_avaliacao/components/Containers/containerImagem.dart';
 import 'package:portifolio_pessoal_avaliacao/components/Titles/bemVindo.dart';
-import 'package:portifolio_pessoal_avaliacao/pages/boasVindas.dart';
+import 'package:portifolio_pessoal_avaliacao/pages/apresentacao.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});

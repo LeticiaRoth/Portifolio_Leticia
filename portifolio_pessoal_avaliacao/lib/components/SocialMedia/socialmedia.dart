@@ -12,6 +12,7 @@ class SocialMedia extends StatelessWidget {
     }
   }
 
+  //Links das redes sociais
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,21 +20,31 @@ class SocialMedia extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 56, 7, 7),
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: const Color.fromARGB(255, 255, 255, 255),
           width: 1,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color.fromARGB(255, 100, 41, 41).withOpacity(0.1),
+            blurRadius: 10,
+          ),
+        ],
       ),
+      //Icones
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _socialImage('assets/github.png', 'https://github.com/LeticiaRoth'),
           _socialImage(
             'assets/linkedin.png',
-            'https://linkedin.com/in/seu-perfil',
+            'https://www.linkedin.com/in/let%C3%ADcia-alves-roth-710242327/',
           ),
-          _socialImage('assets/figma.png', 'https://figma.com/@seu-perfil'),
+          _socialImage(
+            'assets/figma.png',
+            'https://www.figma.com/files/team/1491835138766914437/all-projects?fuid=1110610393015573793',
+          ),
         ],
       ),
     );
@@ -50,7 +61,7 @@ class SocialMedia extends StatelessWidget {
           width: 80,
           height: 80,
           fit: BoxFit.contain,
-          //Para ver se tiver erro na imagem
+          //Em caso de erro na imagem, ficará com o icone broken_image
           errorBuilder: (context, error, stackTrace) => const Icon(
             Icons.broken_image,
             size: 60,

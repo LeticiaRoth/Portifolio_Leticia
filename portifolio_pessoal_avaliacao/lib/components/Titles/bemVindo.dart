@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Bemvindo extends StatelessWidget {
+  //Declaração variaveis
   String tituloH1;
   String tituloH2;
 
@@ -16,7 +17,7 @@ class Bemvindo extends StatelessWidget {
             color: Colors.white,
             fontSize: 27,
             fontWeight: FontWeight.bold,
-            letterSpacing: 2
+            letterSpacing: 2,
           ),
         ),
         SizedBox(height: 3),
@@ -25,11 +26,10 @@ class Bemvindo extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontSize: 23,
-            fontWeight: FontWeight.w100
+            fontWeight: FontWeight.w100,
           ),
-        )
+        ),
       ],
-      
     );
   }
 }

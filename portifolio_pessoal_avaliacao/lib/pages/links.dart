@@ -13,25 +13,28 @@ class Links extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 50),
+            SizedBox(height: 30),
 
-            const Center(child: SocialMedia()),
+            //Links das redes sociais
+            Center(child: SocialMedia()),
 
             Padding(
-              padding: EdgeInsets.only(top: 100, bottom: 20),
+              padding: EdgeInsets.only(top: 50, bottom: 20),
               child: Text(
                 "TECNOLOGIAS",
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 61, 1, 11),
-                  letterSpacing: 4
+                  letterSpacing: 4,
                 ),
               ),
             ),
 
             // Componente do Carrossel
-            const Carrossel(),
+            Carrossel(),
+
+            //Componente de agradecimento
           ],
         ),
       ),

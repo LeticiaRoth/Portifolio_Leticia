@@ -5,6 +5,7 @@ class CardProjeto extends StatelessWidget {
   final String nome;
   final String colaboradores;
   final String descricao;
+  final Color corFundo;
 
   const CardProjeto({
     super.key,
@@ -12,15 +13,16 @@ class CardProjeto extends StatelessWidget {
     required this.nome,
     required this.colaboradores,
     required this.descricao,
+    required this.corFundo,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       padding: const EdgeInsets.all(13),
       decoration: const BoxDecoration(
-        color: Color(0xFF8F2323),
+        color: Color.fromARGB(255, 61, 1, 1),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
           bottomRight: Radius.circular(10),
@@ -29,13 +31,25 @@ class CardProjeto extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              imagem,
-              height: 140,
-              width: 130,
-              fit: BoxFit.cover,
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: corFundo,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                imagem,
+                height: 110,
+                width: 110,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => const Icon(
+                  Icons.broken_image,
+                  size: 60,
+                  color: Colors.white70,
+                ),
+              ),
             ),
           ),
           SizedBox(width: 16),
@@ -46,31 +60,28 @@ class CardProjeto extends StatelessWidget {
               children: [
                 Text(
                   nome,
-                  style: const TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                  style: TextStyle(
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5,
-                    fontSize: 19,
+                    fontSize: 15,
                   ),
                 ),
                 SizedBox(height: 6),
                 Text(
                   colaboradores,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    color: Color.fromARGB(221, 255, 217, 217),
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: const Color.fromARGB(246, 255, 201, 201),
                     fontWeight: FontWeight.w300,
-                    letterSpacing: 3
+                    letterSpacing: 2,
                   ),
                 ),
                 SizedBox(height: 2),
                 Text(
                   descricao,
-                  softWrap: true, 
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Color.fromARGB(221, 255, 255, 255),
-                  ),
+                  softWrap: true,
+                  style: TextStyle(fontSize: 13, color: Colors.white),
                 ),
               ],
             ),
