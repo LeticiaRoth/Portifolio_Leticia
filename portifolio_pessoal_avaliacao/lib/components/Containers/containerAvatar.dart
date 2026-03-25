@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ContainerApresentacao extends StatelessWidget {
-  final String imagem;
-  final String nome;
-  final String idade;
-  final String cidade;
-  final String funcao;
+  String imagem;
+  String nome;
+  String idade;
+  String cidade;
+  String funcao;
 
-  const ContainerApresentacao({
+  ContainerApresentacao({
     super.key,
     required this.imagem,
     required this.nome,

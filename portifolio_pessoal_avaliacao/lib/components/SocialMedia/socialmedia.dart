@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMedia extends StatelessWidget {
-  const SocialMedia({super.key});
+  SocialMedia({super.key});
 
   // Função da URl
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      //Verificação em caso de erro
       throw Exception('Não foi possível abrir $url, tente novamente!');
     }
   }
@@ -58,8 +59,8 @@ class SocialMedia extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
           path,
-          width: 80,
-          height: 80,
+          width: 70,
+          height: 60,
           fit: BoxFit.contain,
           //Em caso de erro na imagem, ficará com o icone broken_image
           errorBuilder: (context, error, stackTrace) => const Icon(

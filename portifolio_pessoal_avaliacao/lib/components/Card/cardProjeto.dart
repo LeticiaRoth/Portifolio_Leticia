@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CardProjeto extends StatelessWidget {
-  final String imagem;
-  final String nome;
-  final String colaboradores;
-  final String descricao;
-  final Color corFundo;
+  String imagem;
+  String nome;
+  String colaboradores;
+  String descricao;
+  Color corFundo;
 
-  const CardProjeto({
+  CardProjeto({
     super.key,
     required this.imagem,
     required this.nome,
@@ -20,8 +20,8 @@ class CardProjeto extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      padding: const EdgeInsets.all(13),
-      decoration: const BoxDecoration(
+      padding: EdgeInsets.all(13),
+      decoration: BoxDecoration(
         color: Color.fromARGB(255, 61, 1, 1),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),

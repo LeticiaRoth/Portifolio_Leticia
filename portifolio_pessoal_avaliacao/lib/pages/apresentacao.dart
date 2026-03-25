@@ -28,7 +28,7 @@ class Boasvindas extends StatelessWidget {
               SizedBox(height: 30),
               Container(
                 width: 380,
-                height: 350,
+                height: 340,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: const Color(0xFF690505),
@@ -45,7 +45,7 @@ class Boasvindas extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "FORMAÇÕES",
                       style: TextStyle(
                         color: Colors.white,
@@ -53,13 +53,13 @@ class Boasvindas extends StatelessWidget {
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     Expanded(
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
                             Formacao(
-                              curso: "Desenovlimento de Sistemas",
+                              curso: "Desenvolvimento de Sistemas",
                               instituicao: "ETEC de Hortolândia",
                               periodo: "2022 - 2024",
                               status: "Concluído",
@@ -76,7 +76,18 @@ class Boasvindas extends StatelessWidget {
                               periodo: "2025 - 2028",
                               status: "Cursando",
                             ),
-                            // Adicione quantos precisar aqui
+                            Formacao(
+                              curso: "Curso IoT - Básico",
+                              instituicao: "ETEC de Hortolândia",
+                              periodo: "2022 - 2022",
+                              status: "Concluído",
+                            ),
+                            Formacao(
+                              curso: "Curso de Inglês",
+                              instituicao: "Wizard - English School",
+                              periodo: "2019 - 2023",
+                              status: "Concluído",
+                            ),
                           ],
                         ),
                       ),
@@ -88,7 +99,7 @@ class Boasvindas extends StatelessWidget {
 
               //Botões para as páginas de Projetos e Links
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ButtonRotas(
                     corBotao: const Color(0xFF690505),
@@ -96,6 +107,7 @@ class Boasvindas extends StatelessWidget {
                     texto: "Meus projetos",
                     pagina: const Projetos(),
                   ),
+                  SizedBox(width: 20),
                   ButtonRotas(
                     corBotao: const Color(0xFF8F2323),
                     corTexto: Colors.white,

@@ -39,7 +39,7 @@ class _CarrosselRowState extends State<Carrossel> {
     ];
 
     return SizedBox(
-      height: 200,
+      height: 150,
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(
           scrollbars: false,
@@ -49,9 +49,9 @@ class _CarrosselRowState extends State<Carrossel> {
           controller: _controller,
           itemCount: images.length,
           itemBuilder: (context, index) {
-            double scale = (1 - (_currentPage - index).abs() * 0.35).clamp(
-              0.8,
-              1.0,
+            double scale = (1 - (_currentPage - index).abs() * 0.95).clamp(
+              0.9,
+              1.5,
             );
 
             //Decoração das tecnologias
@@ -59,8 +59,8 @@ class _CarrosselRowState extends State<Carrossel> {
               child: Transform.scale(
                 scale: scale,
                 child: Container(
-                  width: 190,
-                  height: 180,
+                  width: 150,
+                  height: 150,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 255, 198, 198),
                     borderRadius: BorderRadius.only(

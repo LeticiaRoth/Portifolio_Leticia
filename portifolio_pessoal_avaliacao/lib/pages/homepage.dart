@@ -14,6 +14,7 @@ class Homepage extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
+          //Gradiente do fundo da parte inicil
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -44,6 +45,7 @@ class Homepage extends StatelessWidget {
 
             SizedBox(height: 30),
 
+            //Botão de Entrar
             Button(
               corBotao: Color(0xFFDE9393),
               corTexto: Color(0xFF2C0303),

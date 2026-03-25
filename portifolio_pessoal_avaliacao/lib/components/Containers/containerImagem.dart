@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ContainerImagem extends StatelessWidget {
-  final String imagem;
-  final String textoPrincipal;
-  final String textoSecundario;
+  String imagem;
+  String textoPrincipal;
+  String textoSecundario;
 
-  const ContainerImagem({
+  ContainerImagem({
     super.key,
     required this.imagem,
     required this.textoPrincipal,
